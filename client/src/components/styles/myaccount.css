@@ -1,0 +1,24 @@
+.myaccountpage {
+    width: 30%;
+
+    background: white;
+    margin: 100px auto;
+
+    display: flex;
+    flex-flow: wrap column;
+
+    padding: 20px;
+}
+
+.myaccountpagemain {
+
+}
+
+.mac {
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+.maca {
+    padding: 0px;
+}

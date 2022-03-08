@@ -1,0 +1,23 @@
+.main {
+    padding: 30px;
+    background: white;
+
+    width: 20%;
+    margin-top: 120px;
+}
+
+.authlogin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.authformbuttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.subm {
+    margin-top: 0px;
+}

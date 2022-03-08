@@ -1,0 +1,13 @@
+.logotype {
+    font-weight: bold;
+    color: #005cff;
+}
+
+.header {
+    background-color: white;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
