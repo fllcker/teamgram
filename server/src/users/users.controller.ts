@@ -15,7 +15,7 @@ export class UsersController {
     }
 
     @Get('/id/:uid')
-    async getUserById(@Param('uid') uid:number): Promise<Users> {
+    async getUserById(@Param('uid') uid): Promise<Users> {
         return this.usersService.getUserById(uid)
     }
 
@@ -24,11 +24,15 @@ export class UsersController {
         let {email, passwd} = body;
         let result = await this.usersService.VeriryAuthData(email, passwd)
         if (result) {
-            let payload = this.usersService.getUserByEmail(email)
+            let payload = await this.usersService.getUserByEmail(email)
             return payload
         } else return {error: 1}
     }
 
+    @Get('/byemail/:email')
+    async getUserByEmail(@Param('email') pemail:string): Promise<Users> {
+        return this.usersService.getUserByEmail(pemail)
+    }
 
     @Post('/new')
     async NewUser(@Body() createUserDto: CreateUserDto): Promise<Users> {

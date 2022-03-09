@@ -4,6 +4,8 @@ import { AppService } from './app.service';
 import {MongooseModule} from "@nestjs/mongoose";
 import {ConfigModule} from "@nestjs/config";
 import { UsersModule } from './users/users.module';
+import { DialogsModule } from './dialogs/dialogs.module';
+import { MessagesModule } from './messages/messages.module';
 
 @Module({
     controllers: [AppController],
@@ -11,7 +13,9 @@ import { UsersModule } from './users/users.module';
     imports: [
         ConfigModule.forRoot(),
         MongooseModule.forRoot(process.env.MONGO_URL),
-        UsersModule
+        UsersModule,
+        DialogsModule,
+        MessagesModule
     ]
 })
 export class AppModule {}

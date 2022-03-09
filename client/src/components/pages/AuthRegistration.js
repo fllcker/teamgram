@@ -1,4 +1,4 @@
-import './styles/auth.css'
+import '../styles/auth.css'
 import {Link, useNavigate} from "react-router-dom";
 import {useState} from "react";
 import {useCookies} from "react-cookie";
